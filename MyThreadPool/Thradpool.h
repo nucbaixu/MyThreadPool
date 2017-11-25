@@ -65,14 +65,11 @@ namespace BX
         volatile  bool              isRunning_;
         int                         threadsNum_;
 
-		std::vector<std::thread> threads_;
+		std::vector<std::thread>    threads_;
         std::deque<Task*>           taskQueue_;
  
 		std::mutex              mutex_;
-		std::condition_variable_any condition_;
-
 		std::condition_variable_any m_notEmpty_condition_;
-		std::condition_variable_any m_NotFull_condition_;
 
 
 
